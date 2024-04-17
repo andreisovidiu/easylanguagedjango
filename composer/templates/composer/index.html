@@ -252,7 +252,7 @@
             <br>
     
         {% endif %}
-    
+        <!-------------------------------------- Breakout end ----------------------------------->
         <!-------------------------------------- Reversal --------------------------------------->
         {% if trigger == "reversal" %}
             input: StartTime({{ starttime }}), EndTime({{ endtime }}), MyStopLoss({{ stoploss }}), MyTakeProfit({{ takeprofit }}); <br>
@@ -400,6 +400,7 @@
             if MyTakeProfit > 0 then Setprofittarget(MyTakeProfit); <br>
             <br>
         {% endif %}
+        <!-------------------------------------- Reversal end ------------------------------------->
     </div>
 </form>
 

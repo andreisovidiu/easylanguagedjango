@@ -1,0 +1,84 @@
+{% extends "composer/layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+
+<form action="/login" method="POST">
+    <section>
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-8 col-md-8 col-lg-6 col-4>
+                <div class="card bg-dark text-white" style="border-radius: 4rem;">
+                <div class="card-body p-5 text-center">
+
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p style="font-weight: 500;">Glad to see you back!</p>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username" />
+                        <label class="form-label" style="font-weight: 500;" for="typeEmailX">username</label>
+                    </div>
+
+                        <!-- <div class="form-outline form-white mb-4">
+                            <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password" />
+                            <label class="form-label" for="typePasswordX">Password</label>
+                        </div> -->
+                    
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                    
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+<footer>
+    <p style="font-family: 'Courier New', Courier, monospace;">Created by ©SOACM</p>
+</footer>
+
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+    {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+    },
+    {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100"
+    },
+    {
+        "description": "DOW",
+        "proName": "CBOT_MINI:YM1!"
+    },
+    {
+        "description": "DAX",
+        "proName": "EUREX:FDAX1!"
+    },
+    {
+        "description": "FTSE",
+        "proName": "ICEEUR:Z1!"
+    },
+    {
+        "description": "FTSEMIB",
+        "proName": "INDEX:FTSEMIB"
+    }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": true,
+    "displayMode": "adaptive",
+    "locale": "en"
+}
+    </script>
+</div>
+<!-- TradingView Widget END -->
+
+{% endblock %}

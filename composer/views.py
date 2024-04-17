@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 # Composer UI
 def index(request):
     if request.method == "POST":
@@ -15,9 +14,17 @@ def index(request):
         takeprofit = request.POST.get("takeprofit")
         tradeliquid = request.POST.get("tradeliquid")
         
-        return render(request, "composer/index.html", {"starttime": starttime, "endtime": endtime, "trigger": trigger, 
-                                                       "entrieslimit": entrieslimit, "direction": direction, "pattern": pattern, 
-                                                       "stoploss": stoploss, "takeprofit": takeprofit, "tradeliquid": tradeliquid})
+        return render(request, "composer/index.html", {
+            "starttime": starttime, 
+            "endtime": endtime, 
+            "trigger": trigger, 
+            "entrieslimit": entrieslimit, 
+            "direction": direction, 
+            "pattern": pattern, 
+            "stoploss": stoploss, 
+            "takeprofit": takeprofit, 
+            "tradeliquid": tradeliquid
+            })
     else:
         return render(request, "composer/index.html")
     
@@ -27,3 +34,10 @@ def index(request):
 # Instructions GUI
 def about(request):
     return render(request, "composer/about.html")
+
+def register(request):
+    return render(request, "composer/register.html")
+
+def login(request):
+    return render(request, "composer/login.html")
+
