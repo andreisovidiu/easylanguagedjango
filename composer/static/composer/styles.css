@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+body {
+    background: black;
+    background-image: blaack;
+    background-size: cover;
+}
+
+#navbar {
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+}
+
+#navbar h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.left {
+    float: left;
+    width: 60%;
+}
+
+.right {
+    float: right;
+    width: 40%;
+}
+
+.generator {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: #ffffffc4;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.generator:hover {
+    color: #00d4fa;
+    text-decoration: none;
+}
+
+/* Available options */
+
+.trigger {
+    float: left;
+    clear: both;
+}
+
+.trigger select, option {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 3px;
+    width: 15vw;
+}
+
+.session {
+    clear: both;
+    float: left;
+    margin-bottom: 20px;   
+}
+
+.session input {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    padding: 3px;
+    width: 5vw;
+}
+
+.direction {
+    float: left;
+    clear: both;
+    text-align: left;
+    outline-color: rgba(255, 255, 255, 0.200);
+    outline-style: solid;
+    outline-width: 1px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.stoploss {
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.stoploss input {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    padding: 3px;
+    width: 15vw;
+}
+
+.takeprofit {
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.takeprofit input {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    padding: 3px;
+    width: 15vw;
+}
+
+/* End of available options */
+
+.submitbutton {
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.submitbutton input {
+    color: rgb(255, 255, 255);
+    background-color: #01799ace;
+    border-radius: 20px;
+    width: 100px;
+    height:40px;
+    padding: 3px;
+}
+
+.submitbutton:hover {
+    background-color: #00d4fa;
+    border-radius: 20px;
+}
+
+.submitbuttonnolog {
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.submitbuttonnolog button {
+    color: rgb(255, 255, 255);
+    background-color: #01799ace;
+    border-radius: 20px;
+    width: 120px;
+    height:45px;
+}
+
+.submitbuttonnolog button:hover {
+    background-color: #00d4fa9f;
+    border-radius: 20px;
+}
+
+.copy button {
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #01799ace;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    width: 80px;
+    height:30px;
+    padding: 3px;
+}
+
+.copy button:hover {
+    background-color: #00d4fa9f;
+    border-radius: 20px;
+}
+
+.pattern {
+    float: left;
+    clear: both;
+}
+
+.pattern select, option {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 3px;
+    width: 15vw;
+}
+
+.footer {
+    float: left;
+    clear: both;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.footer p {
+    font-size: 8px;
+}
+
+#output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    outline-color: rgba(255, 255, 255, 0.200);
+    outline-style: solid;
+    outline-width: 3px;
+    margin-bottom: 40px;
+    padding: 25px;
+    text-align: left;
+}
+
+.loggedout {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: #ffffffc4;
+    display: inline-block;
+}
+
+.loggedout:hover {
+    color: #00d4fa;
+    text-decoration: none;
+}
+
+.loggedin {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    color: #ffffffc4;
+    float:right;
+    margin-right: 2vw;
+}
+
+.loggedin:hover {
+    color: #00d4fa;
+    text-decoration: none;
+}
+
+.tradingview-widget-container {
+    margin-top: 50px;
+}
+
+/* Apology */
+.apology {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.goback {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    background-color: #01799ace;
+    border-radius: 20px;
+    height:60px;
+    padding: 8px;
+}
+
+.goback:hover {
+    color: white;
+    background-color: #00d4fa9f;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.tradeduration {
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.tradeduration input {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #01799a6e;
+    border-radius: 10px;
+    padding: 3px;
+    width: 15vw;
+}
+
+#about p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    width: 80%;
+    outline-color: rgba(255, 255, 255, 0.200);
+    outline-style: solid;
+    outline-width: 3px;
+    margin-bottom: 40px;
+    padding: 25px;
+    text-align: left;
+}

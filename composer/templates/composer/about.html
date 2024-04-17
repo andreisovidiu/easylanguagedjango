@@ -1,0 +1,35 @@
+{% extends "composer/layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<div class="left" id="about">
+    <p><span style="font-weight:800; font-family: 'Courier New', Courier, monospace;">EasyLanguage translator</span> is a web application that allows users to translate text from English to <span style="font-weight:800; font-family: 'Courier New', Courier, monospace;">EasyLanguage</span>. <br>
+    <br>
+    Intra-day trading strategies can be created with just a few clicks. <br>
+    <br>
+    Insert the entry and exit logic and click on the <span style="font-weight:800; font-family: 'Courier New', Courier, monospace;">Generate</span> button then simply copy and paste your EasyLanguage code into your <span style="font-weight:800; font-family: 'Courier New', Courier, monospace;">MultiCharts</span> or <span style="font-weight:800; font-family: 'Courier New', Courier, monospace;">TradeStation</span> compiler.
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="font-weight:800; font-size:16px; font-family: 'Courier New', Courier, monospace;">INSTRUCTIONS</span> <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Choose a trigger:</span> choose a type of entry logic. <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Time window:</span> choose the time when you want the strategy to be actively looking for entries. <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Stop loss:</span> choose the value of the stop loss in US Dollars. <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Take profit:</span> choose the value of the take profit in US Dollars. <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Trade liquidation:</span> choose the time when you want to close your trade. <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Choose pattern:</span> add a pattern that filters your trades (e.g., strategy is active only if the previous trading day was a <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Doji</span> candle). <br>
+    <br>
+    <span style="font-weight:800; font-size:14px; font-family: 'Courier New', Courier, monospace;">Choose direction:</span> choose the direction of the strategy (long and short, long only, short only).  
+    </p>
+</div>
+{% endblock %}
