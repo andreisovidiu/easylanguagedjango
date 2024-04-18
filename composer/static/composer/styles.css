@@ -50,7 +50,7 @@ body {
     text-decoration: none;
 }
 
-/* Available options */
+/* Available strategy options */
 
 .trigger {
     float: left;
@@ -124,7 +124,7 @@ body {
     width: 15vw;
 }
 
-/* End of available options */
+/* End of available strategy options */
 
 .submitbutton {
     float: left;

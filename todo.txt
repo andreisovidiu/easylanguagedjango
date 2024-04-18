@@ -1,6 +1,8 @@
 Write app models 
 https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
 
-Add Login decorator and html pages
+Fix Login and Register forms DONE
+Add Login decorator and logic
+Add Register logic
 
 Add strategy purchase option
