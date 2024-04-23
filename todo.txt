@@ -1,8 +1,19 @@
-Write app models 
-https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
+Write app models DONE
+Move model from composer app to students app DONE
+Move html login and register from composer app to students app DONE
+Add csrf token to the forms DONE
+Make the form interact with the db (min 19.32) --> 
+USE GIT
+https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
 
 Fix Login and Register forms DONE
 Add Login decorator and logic
 Add Register logic
 
-Add strategy purchase option
+Add API
+Publish using Docker
+
+# Superuser credentials
+andreiovidiu
+andreisovidiu@gmail.com
+16031996

@@ -6,7 +6,8 @@
 
 {% block main %}
 
-<form action="/login" method="POST">
+<form method="POST">
+    {% csrf_token %}
     <section>
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

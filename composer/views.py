@@ -35,9 +35,3 @@ def index(request):
 def about(request):
     return render(request, "composer/about.html")
 
-def register(request):
-    return render(request, "composer/register.html")
-
-def login(request):
-    return render(request, "composer/login.html")
-
