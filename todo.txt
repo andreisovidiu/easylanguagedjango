@@ -1,14 +1,16 @@
 Write app models DONE
 Move model from composer app to students app DONE
-Move html login and register from composer app to students app DONE
-Add csrf token to the forms DONE
-Make the form interact with the db (min 19.32) --> 
-USE GIT
-https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
 
-Fix Login and Register forms DONE
-Add Login decorator and logic
-Add Register logic
+Move html login and register from composer app to students app DONE
+
+Add csrf token to the forms DONE
+
+Registration form --> DONE
+https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6&t=777s
+
+Registration form customization -->
+https://stackoverflow.com/questions/5827590/css-styling-in-django-forms
+https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 
 Add API
 Publish using Docker

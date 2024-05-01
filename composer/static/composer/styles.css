@@ -3,13 +3,13 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
+    color: rgb(0, 0, 0);
     font-size: 14px;
+    font-weight: 600;
 }
 
 body {
-    background: black;
-    background-image: blaack;
+    background: grey;
     background-size: cover;
 }
 
@@ -40,7 +40,7 @@ body {
 .generator {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 13px;
-    color: #ffffffc4;
+    color: #000000c4;
     text-decoration: none;
     display: inline-block;
 }
@@ -50,7 +50,7 @@ body {
     text-decoration: none;
 }
 
-/* Available strategy options */
+/* Available options */
 
 .trigger {
     float: left;
@@ -58,7 +58,7 @@ body {
 }
 
 .trigger select, option {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;;
     background-color: #01799a6e;
     border-radius: 10px;
@@ -74,7 +74,7 @@ body {
 }
 
 .session input {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;;
     background-color: #01799a6e;
     border-radius: 10px;
@@ -101,7 +101,7 @@ body {
 }
 
 .stoploss input {
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;;
     background-color: #01799a6e;
     border-radius: 10px;
@@ -116,7 +116,7 @@ body {
 }
 
 .takeprofit input {
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     background-color: #01799a6e;
     border-radius: 10px;
@@ -124,7 +124,7 @@ body {
     width: 15vw;
 }
 
-/* End of available strategy options */
+/* End of available options */
 
 .submitbutton {
     float: left;
@@ -134,7 +134,7 @@ body {
 }
 
 .submitbutton input {
-    color: rgb(255, 255, 255);
+    color: black;
     background-color: #01799ace;
     border-radius: 20px;
     width: 100px;
@@ -155,7 +155,7 @@ body {
 }
 
 .submitbuttonnolog button {
-    color: rgb(255, 255, 255);
+    color: black;
     background-color: #01799ace;
     border-radius: 20px;
     width: 120px;
@@ -171,7 +171,7 @@ body {
     float: right;
     clear: both;
     margin-bottom: 20px;
-    color: rgb(255, 255, 255);
+    color: black;
     background-color: #01799ace;
     border-radius: 20px;
     font-family: 'Courier New', Courier, monospace;
@@ -192,7 +192,7 @@ body {
 }
 
 .pattern select, option {
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     background-color: #01799a6e;
     border-radius: 10px;
@@ -282,7 +282,7 @@ body {
 }
 
 .tradeduration input {
-    color: white;
+    color:black;
     font-family: 'Courier New', Courier, monospace;
     background-color: #01799a6e;
     border-radius: 10px;

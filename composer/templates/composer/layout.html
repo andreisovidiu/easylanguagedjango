@@ -17,16 +17,16 @@
     </head>
 
     <body>
-        <nav style="background-color: #01799a5b;">
+        <nav class="container-fluid" style="background-color: grey;">
             <div id="navbar">
-                <h2 style="margin-left: 10px;">EasyLanguage Composer</h2>
-                    <a class="generator" style="margin-left: 10px;" href="{% url 'composerindex' %}">GENERATOR</a>
+                <h2>EasyLanguage Composer</h2>
+                    <a class="generator" href="{% url 'composerindex' %}">GENERATOR</a>
                     <a class="generator" style="margin-left: 10px;" href="{% url 'composerabout' %}">instructions</a>
             </div>
         </nav>
-        <main class="container-fluid py-5 text-center" style="margin: 10px;">
+        <main class="container-fluid py-5 text-center">
             {% block main %}{% endblock %}
         </main>
     </body> 
 
-</html>
+</html> 
