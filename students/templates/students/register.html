@@ -1,4 +1,5 @@
 {% extends "composer/layout.html" %}
+{% load crispy_forms_tags %}
 {% block title %}
     Register
 {% endblock %}
@@ -7,15 +8,61 @@
 <div class="content-section">
     <form method="POST">
         {% csrf_token %}
-        <fieldset class="form-group" style="text-align: center;">
-            {{ form.as_table }}
-            <button class="btn btn-outline-light btn-lg px-5" type="submit">Register</button> 
-        </fieldset>
+        {{ form|crispy }}
+        <button class="btn btn-outline-light btn-lg px-5" type="submit" style="margin-top: 5px;">Register</button> 
+        <div style="margin-top: 20px;">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+        </small>
+        </div>
     </form>
+
 </div>
+
 
 <footer>
     <p style="font-family: 'Courier New', Courier, monospace;">Created by ©SOACM</p>
 </footer>
+
+<!-- TradingView Widget -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+    {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+    },
+    {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100"
+    },
+    {
+        "description": "DOW",
+        "proName": "CBOT_MINI:YM1!"
+    },
+    {
+        "description": "DAX",
+        "proName": "EUREX:FDAX1!"
+    },
+    {
+        "description": "FTSE",
+        "proName": "ICEEUR:Z1!"
+    },
+    {
+        "description": "FTSEMIB",
+        "proName": "INDEX:FTSEMIB"
+    }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": true,
+    "displayMode": "adaptive",
+    "locale": "en"
+}
+    </script>
+</div>
+<!-- TradingView Widget END -->
 
 {% endblock %}

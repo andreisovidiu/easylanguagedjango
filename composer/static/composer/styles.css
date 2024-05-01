@@ -9,7 +9,7 @@
 }
 
 body {
-    background: grey;
+    background: rgb(73, 73, 73);
     background-size: cover;
 }
 
@@ -301,3 +301,13 @@ body {
     padding: 25px;
     text-align: left;
 }
+
+/* Registration form */
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed for vertical centering */
+}
+
