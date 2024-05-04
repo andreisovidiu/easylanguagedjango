@@ -1,47 +1,30 @@
 {% extends "composer/layout.html" %}
-
+{% load crispy_forms_tags %}
 {% block title %}
     Login
 {% endblock %}
 
 {% block main %}
-
-<form method="POST">
-    {% csrf_token %}
-    <section>
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-8 col-md-8 col-lg-6 col-4">
-                <div class="card bg-dark text-white" style="border-radius: 4rem;">
-                <div class="card-body p-5 text-center">
-
-                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                    <p style="font-weight: 500;">Glad to see you back!</p>
-
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username" />
-                        <label class="form-label" for="typeEmailX">Username</label>
-                    </div>
-
-                        <div class="form-outline form-white mb-4">
-                            <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password" />
-                            <label class="form-label" for="typePasswordX">Password</label>
-                        </div>
-                    
-                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-                    
-                </div>
-                </div>
-            </div>
-            </div>
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-outline-light btn-lg px-5" type="submit" style="margin-top: 5px;">Login</button> 
+        <div style="margin-top: 20px;">
+        <small class="text-muted">
+            Need An Account? <a class="ml-2" href="#">Sign Up</a>
+        </small>
         </div>
-    </section>
-</form>
+    </form>
+
+</div>
+
 
 <footer>
     <p style="font-family: 'Courier New', Courier, monospace;">Created by ©SOACM</p>
 </footer>
 
+<!-- TradingView Widget -->
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>

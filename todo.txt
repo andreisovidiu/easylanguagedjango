@@ -14,6 +14,7 @@ https://stackoverflow.com/questions/5827590/css-styling-in-django-forms
 https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 
 Login and logout --> DOING
+https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
 
 Add API
 Publish using Docker
