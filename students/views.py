@@ -17,4 +17,4 @@ def register(request):
 
 @login_required
 def logout(request):
-    return render(request, 'students/logout.htm', {})
+    return render(request, 'students/logout.html', {})
