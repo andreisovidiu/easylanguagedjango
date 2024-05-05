@@ -1,0 +1,60 @@
+{% extends "composer/layout.html" %}
+
+{% block title %}
+    Logout
+{% endblock %}
+
+{% block main %}
+<div style="margin-top: 20px;">
+    <h2>You have been logged out</h2>
+    <small class="text-muted">
+        <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+    </small>
+</div>
+
+<footer>
+    <p style="font-family: 'Courier New', Courier, monospace;">Created by ©SOACM</p>
+</footer>
+
+<!-- TradingView Widget -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+    {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+    },
+    {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100"
+    },
+    {
+        "description": "DOW",
+        "proName": "CBOT_MINI:YM1!"
+    },
+    {
+        "description": "DAX",
+        "proName": "EUREX:FDAX1!"
+    },
+    {
+        "description": "FTSE",
+        "proName": "ICEEUR:Z1!"
+    },
+    {
+        "description": "FTSEMIB",
+        "proName": "INDEX:FTSEMIB"
+    }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": true,
+    "displayMode": "adaptive",
+    "locale": "en"
+}
+    </script>
+</div>
+<!-- TradingView Widget END -->
+
+{% endblock %}

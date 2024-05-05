@@ -13,6 +13,4 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'students/register.html', {'form': form})
-    
-def login(request):
-    return render(request, "students/login.html")
+
