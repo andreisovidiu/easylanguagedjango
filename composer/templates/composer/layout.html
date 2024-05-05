@@ -25,7 +25,10 @@
                     <!-- Navbar Right Side -->
                     {% if user.is_authenticated %}
                     <a class="loggedin" href="#">Profile</a>
-                    <a class="loggedin" href="{% url 'logout' %}">Logout</a>
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="loggedin" type="submit">Logout</button>
+                    </form>
                     {% else %}
                     <a class="loggedout" href="{% url 'login' %}">Login</a>
                     <a class="loggedout" href="{% url 'register' %}">Register</a>
