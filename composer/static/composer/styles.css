@@ -204,7 +204,6 @@ body {
 .footer {
     float: left;
     clear: both;
-    margin-top: 50px;
     text-align: left;
 }
 
@@ -302,12 +301,10 @@ body {
     text-align: left;
 }
 
-/* Registration form */
+/* Auth and registration form */
 
 .content-section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust as needed for vertical centering */
 }
 
