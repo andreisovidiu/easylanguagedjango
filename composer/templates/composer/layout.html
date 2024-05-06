@@ -24,9 +24,9 @@
                     <a class="generator" style="margin-left: 10px;" href="{% url 'composerabout' %}">instructions</a>
                     <!-- Navbar Right Side -->
                     {% if user.is_authenticated %}
-                        <form method="POST" action="{% url 'logout' %}">
+                        <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'logout' %}">
                             {% csrf_token %}
-                            <button class="loggedin" type="submit">Logout</button>
+                            <button class="btn btn-outline-danger my-2 my-sm-0 ml-auto" type="submit">Logout</button>
                         </form>
                     {% else %}
                     <a class="loggedout" href="{% url 'login' %}">Login</a>
