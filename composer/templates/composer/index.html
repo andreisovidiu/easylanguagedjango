@@ -9,6 +9,9 @@
 {% load static %}
 
 <form action="{% url 'composerindex' %}" method="POST">
+
+    <!-------------------------------------- Left-side strategy inputs -------------------------------------->
+    
     {% csrf_token %}
     <div class="left">
         <div class="trigger">
@@ -86,7 +89,7 @@
 
     </div>
 
-    <!-------------------------------------- Right Side EasyLanguage & Jinja output -------------------------------------->
+    <!-------------------------------------- Right-side EasyLanguage & Jinja output -------------------------------------->
     
     <div class="right" id="output">
         // EasyLanguage code composer by ©SOACM. All rights reserved // <br>
