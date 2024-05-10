@@ -9,8 +9,10 @@
 }
 
 body {
-    background: rgb(73, 73, 73);
+    background: rgb(127, 127, 127);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.250), rgba(255, 255, 255, 0.250)), url(djangoimage.jpg);
     background-size: cover;
+    
 }
 
 #navbar {
