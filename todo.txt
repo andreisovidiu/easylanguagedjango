@@ -18,10 +18,17 @@ https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6
 Logout -->
 https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26044/6
 
-Logout CSS --> DOING
+Logout CSS --> DONE
 
-Add API
-Publish using Docker
+Add decorator to functions --> DOING
+
+Add API --> TO DO
+Publish using Docker --> TO DO
+
+
+
+
+
 
 # Superuser credentials
 andreiovidiu
