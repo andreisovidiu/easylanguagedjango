@@ -21,9 +21,16 @@ https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26
 
 Logout CSS --> DONE
 
-Add decorator to functions --> DOING
+Add decorator to functions --> DONE
+
+Publish using Docker --> DOING
 
 Add API --> TO DO
+https://www.youtube.com/watch?v=nC2kQylku0w&list=PL-2EBeDYMIbS7bXwkMOS_ajeTdNRnhApX&index=2
+https://django-ninja.dev/
+
+
+
 Publish using Docker --> TO DO
 
 
