@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Composer UI
+@login_required
 def index(request):
     if request.method == "POST":
         # Get form information
@@ -27,9 +29,6 @@ def index(request):
             })
     else:
         return render(request, "composer/index.html")
-    
-        # if request.method == "GET":
-        #     return render(request, 'composer/index.html')
 
 # Instructions GUI
 def about(request):

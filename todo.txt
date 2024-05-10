@@ -15,7 +15,8 @@ https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 
 Login and logout --> DONE (11:46)
 https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
-Logout -->
+
+Logout ISSUE -->
 https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26044/6
 
 Logout CSS --> DONE
