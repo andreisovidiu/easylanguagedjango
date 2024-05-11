@@ -216,7 +216,6 @@ body {
 
 #output {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10px;
     outline-color: rgba(255, 255, 255, 0.200);
     outline-style: solid;
     outline-width: 3px;
