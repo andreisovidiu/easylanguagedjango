@@ -24,6 +24,10 @@ Logout CSS --> DONE
 Add decorator to functions --> DONE
 
 Publish using Docker --> DOING
+    1. Modify settings.py
+    2. Create Docker image
+    3. Connect to PostgreSQL
+
 
 Add API --> TO DO
 https://www.youtube.com/watch?v=nC2kQylku0w&list=PL-2EBeDYMIbS7bXwkMOS_ajeTdNRnhApX&index=2
