@@ -23,19 +23,17 @@ Logout CSS --> DONE
 
 Add decorator to functions --> DONE
 
-Publish using Docker --> DOING
+Publish using Docker --> DOING 
     1. Modify settings.py
-    2. Create Docker image
+    2. Create Docker image --> Image does not RUN
     3. Connect to PostgreSQL
+https://www.youtube.com/watch?v=mbUOtILjGgU
 
 
-Add API --> TO DO
+Add API that allows Get method for the saved strategies --> DOING
 https://www.youtube.com/watch?v=nC2kQylku0w&list=PL-2EBeDYMIbS7bXwkMOS_ajeTdNRnhApX&index=2
 https://django-ninja.dev/
 
-
-
-Publish using Docker --> TO DO
 
 
 
