@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from . import models
 
-# Composer UI
+# Composer strategy inputs
 @login_required
 def index(request):
     if request.method == "POST":
@@ -15,7 +16,7 @@ def index(request):
         stoploss = request.POST.get("stoploss")
         takeprofit = request.POST.get("takeprofit")
         tradeliquid = request.POST.get("tradeliquid")
-        
+        # Write strategy on the right side using the user's inputs
         return render(request, "composer/index.html", {
             "starttime": starttime, 
             "endtime": endtime, 
