@@ -1,0 +1,318 @@
+<!-------------------------------------- Right-side EasyLanguage & Jinja output -------------------------------------->
+
+<div class="right" id="output" style="font-size: 11px;">
+    // EasyLanguage code composer by ©SOACM. All rights reserved // <br>
+    <br>
+
+    <!-------------------------------------- Breakout -------------------------------------->
+    {% if trigger == "breakout" %}
+        input: StartTime({{ starttime }}), EndTime({{ endtime }}), MyStopLoss({{ stoploss }}), MyTakeProfit({{ takeprofit }}); <br>
+        var: bool MyTime(False), int MP(0); <br>
+            MP = MarketPosition; <br>
+            MyTime = False; <br>
+            if Time >= StartTime and Time <= EndTime and EntriesToday(date[0]) < 1 then MyTime = True; <br>
+            <br>
+            
+            {% if pattern == "none" %}
+            // Levels <br>
+            if date <> date[1] then begin <br>
+            var: highd1(0), lowd1(0); <br>
+            highd1 = HighS(1); <br>
+            lowd1 = LowS(1); <br>
+            end; <br>
+            {% endif %}
+            <br>
+            
+            // Entries <br>
+                <!------------ Patterns ------------>
+                <!------------ Up close ------------>
+                {% if pattern == "upclose" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), lowd1(0), closed1(0), opend1(0); <br>
+                    highd1 = HighS(1); <br>
+                    lowd1 = LowS(1); <br>
+                    closed1 = CloseS(1); <br>
+                    opend1 = OpenS(1); <br>
+                    Condition1 = (closed1 > opend1); <br>
+                    end; <br>
+                    <br>
+                <!------------ Dowm close ------------>
+                {% elif pattern == "downclose" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), lowd1(0), closed1(0), opend1(0); <br>
+                    highd1 = HighS(1); <br>
+                    lowd1 = LowS(1); <br>
+                    closed1 = CloseS(1); <br>
+                    opend1 = OpenS(1); <br>
+                    Condition1 = (closed1 < opend1); <br>
+                    end; <br>
+                    <br>
+                <!------------ Doji ------------>
+                {% elif pattern == "doji" %}
+                    if date <> date[1] then begin <br>
+                    var: opend1(0), closed1(0), highd1(0), lowd1(0); <br>
+                    opend1 = OpenS(1); <br>
+                    closed1 = CloseS(1); <br>
+                    highd1 = HighS(1); <br>
+                    lowd1 = LowS(1); <br>
+                    Condition1 = Absvalue(opend1-closed1) < 0.5 *(highd1 - lowd1); <br>
+                    end; <br>
+                    <br>
+                <!------------ Inside day  ------------>
+                {% elif pattern == "insideday" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                    highd1 = HighS(1); <br>
+                    highd2 = HighS(2); <br>
+                    lowd1 = LowS(1); <br>
+                    lowd2 = LowS(2); <br>
+                    Condition1 = (highd2 > highd1 and lowd2 < lowd1); <br>
+                    end; <br>
+                    <br>
+                <!------------ Outside day ------------>
+                {% elif pattern == "outsideday" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                    highd1 = HighS(1); <br>
+                    highd2 = HighS(2); <br>
+                    lowd1 = LowS(1); <br>
+                    lowd2 = LowS(2); <br>
+                    Condition1 = (highd2 < highd1 and lowd2 > lowd1); <br>
+                    end; <br>
+                    <br>
+                <!------------ Two higher ------------>
+                {% elif pattern == "twohigher" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                    highd1 = HighS(1); <br>
+                    highd2 = HighS(2); <br>
+                    lowd1 = LowS(1); <br>
+                    lowd2 = LowS(2); <br>
+                    Condition1 = highd1 > highd2 and lowd1 > lowd2; <br>
+                    end; <br>
+                    <br>
+                <!------------ Two lower ------------>
+                {% elif pattern == "twolower" %}
+                    if date <> date[1] then begin <br>
+                    var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                    highd1 = HighS(1); <br>
+                    highd2 = HighS(2); <br>
+                    lowd1 = LowS(1); <br>
+                    lowd2 = LowS(2); <br>
+                    Condition1 = highd1 < highd2 and lowd1 < lowd2; <br>
+                    end; <br>
+                    <br>
+
+                {% endif %}
+                <!------------ Patterns End ------------>
+                
+            {% if direction == "longshort" %}
+                if MP = 0 and <br>
+                {% if pattern != "none" %}
+                    Condition1 = True and <br>
+                {% endif %}
+                MyTime = True and <br> 
+                Close < highd1 then <br>
+                begin <br>
+                buy("Long") next bar at highd1 stop; <br>
+                end; <br>
+                if Time >= {{ tradeliquid }} then sell next bar at open; <br>
+                <br>
+                if MP = 0 and <br>
+                {% if pattern != "none" %}
+                    Condition1 = True and <br>
+                {% endif %}
+                MyTime = True and <br> 
+                Close > lowd1 then <br>
+                begin <br>
+                sellshort("Short") next bar at lowd1 stop; <br>
+                end; <br>
+                if Time >= {{ tradeliquid }} then buytocover next bar at open; <br>
+                <br>
+
+            {% elif direction == "longonly" %}
+                if MP = 0 and <br>
+                {% if pattern != "none" %}
+                    Condition1 = True and <br>
+                {% endif %}
+                MyTime = True and <br> 
+                Close < highd1 then <br>
+                begin <br>
+                buy("Long") next bar at highd1 stop; <br>
+                end; <br>
+                if Time >= {{ tradeliquid }} then sell next bar at open; <br>
+
+            {% elif direction == "shortonly" %}
+                if MP = 0 and <br>
+                {% if pattern != "none" %}
+                    Condition1 = True and <br>
+                {% endif %}
+                MyTime = True and <br> 
+                Close > lowd1 then <br>
+                begin <br>
+                sellshort("Short") next bar at lowd1 stop; <br>
+                end; <br>
+                if Time >= {{ tradeliquid }} then buytocover next bar at open; <br>
+                <br>
+            {% endif %}
+            
+        <br>
+        // Exit <br>
+        Setstopcontract; <br>
+        if MyStopLoss > 0 then Setstoploss(MyStopLoss); <br>
+        if MyTakeProfit > 0 then Setprofittarget(MyTakeProfit); <br>
+        <br>
+
+    {% endif %}
+    <!-------------------------------------- Breakout end ----------------------------------->
+
+
+    <!-------------------------------------- Reversal --------------------------------------->
+    {% if trigger == "reversal" %}
+        input: StartTime({{ starttime }}), EndTime({{ endtime }}), MyStopLoss({{ stoploss }}), MyTakeProfit({{ takeprofit }}); <br>
+        var: MyTime(False); <br>
+        MyTime = False; <br>
+        if Time >= StartTime or Time <= EndTime then MyTime = True; <br>
+        <br>
+        
+        // One entry per session <br>   
+        var: MP(0), <br>
+            Int CurSess(0), <br>
+            Int SessEntries(0), <br>
+            Int TT(0); <br>
+            
+        MP = Marketposition; <br>
+        TT = TotalTrades; <br>
+        CurSess = CurrentSession(0); <br>
+        <br>
+        if CurSess[1] <> CurSess then SessEntries = 0; <br>
+        if TT[1] < TT then SessEntries = SessEntries + 1; // if +1 = no trade <br>
+        <br>
+
+        // Entries <br>
+            <!------------ Patterns ------------>
+            <!------------ Up close ------------>
+            {% if pattern == "upclose" %}
+                var: highd1(0), lowd1(0), closed1(0), opend1(0); <br>
+                highd1 = HighS(1); <br>
+                lowd1 = LowS(1); <br>
+                closed1 = CloseS(1); <br>
+                opend1 = OpenS(1); <br>
+                Condition1 = (closed1 > opend1); <br>
+                <br>
+            <!------------ Dowm close ------------>
+            {% elif pattern == "downclose" %}
+                var: highd1(0), lowd1(0), closed1(0), opend1(0); <br>
+                highd1 = HighS(1); <br>
+                lowd1 = LowS(1); <br>
+                closed1 = CloseS(1); <br>
+                opend1 = OpenS(1); <br>
+                Condition1 = (closed1 < opend1); <br>
+                <br>
+            <!------------ Doji ------------>
+            {% elif pattern == "doji" %}
+                var: opend1(0), closed1(0), highd1(0), lowd1(0); <br>
+                opend1 = OpenS(1); <br>
+                closed1 = CloseS(1); <br>
+                highd1 = HighS(1); <br>
+                lowd1 = LowS(1); <br>
+                Condition1 = Absvalue(opend1-closed1) < 0.5 *(highd1 - lowd1); <br>
+                <br>
+            <!------------ Inside day  ------------>
+            {% elif pattern == "insideday" %}
+                if date <> date[1] then begin <br>
+                var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                highd1 = HighS(1); <br>
+                highd2 = HighS(2); <br>
+                lowd1 = LowS(1); <br>
+                lowd2 = LowS(2); <br>
+                Condition1 = (highd2 > highd1 and lowd2 < lowd1); <br>
+                <br>
+            <!------------ Outside day ------------>
+            {% elif pattern == "outsideday" %}
+                var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                highd1 = HighS(1); <br>
+                highd2 = HighS(2); <br>
+                lowd1 = LowS(1); <br>
+                lowd2 = LowS(2); <br>
+                Condition1 = (highd2 < highd1 and lowd2 > lowd1); <br>
+                <br>
+            <!------------ Two higher ------------>
+            {% elif pattern == "twohigher" %}
+                var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                highd1 = HighS(1); <br>
+                highd2 = HighS(2); <br>
+                lowd1 = LowS(1); <br>
+                lowd2 = LowS(2); <br>
+                Condition1 = highd1 > highd2 and lowd1 > lowd2; <br>
+                <br>
+            <!------------ Two lower ------------>
+            {% elif pattern == "twolower" %}
+                var: highd1(0), highd2(0), lowd1(0), lowd2(0); <br>
+                highd1 = HighS(1); <br>
+                highd2 = HighS(2); <br>
+                lowd1 = LowS(1); <br>
+                lowd2 = LowS(2); <br>
+                Condition1 = highd1 < highd2 and lowd1 < lowd2; <br>
+                <br>
+
+            {% endif %}
+            <!------------ Patterns End ------------>
+
+        {% if direction == "longshort" %}
+            if MP = 0 and <br>
+            {% if pattern != "none" %}
+                Condition1 = True and <br>
+            {% endif %}
+            SessEntries = 0 and <br>
+            MyTime = True then <br>
+            begin <br>
+            if c crosses over lowd1 then buy next bar at open; <br>
+            end; <br>
+            if Time = {{ tradeliquid }} then sell next bar at open; <br>
+            <br>
+            if MP = 0 and <br>
+            {% if pattern != "none" %}
+                Condition1 = True and <br>
+            {% endif %}
+            SessEntries = 0 and <br>
+            MyTime = True then <br>
+            begin <br>
+            if c crosses over highd1 then sellshort next bar at open; <br>
+            end; <br>
+            if Time = {{ tradeliquid }} then buytocover next bar at open; <br>
+
+        {% elif direction == "longonly" %}
+            if MP = 0 and <br>
+            {% if pattern != "none" %}
+                Condition1 = True and <br>
+            {% endif %}
+            SessEntries = 0 and <br>
+            MyTime = True then <br>
+            begin <br>
+            if c crosses over lowd1 then buy next bar at open; <br>
+            end; <br>
+            if Time = {{ tradeliquid }} then sell next bar at open; <br>
+
+        {% elif direction == "shortonly" %}
+            if MP = 0 and <br>
+            {% if pattern != "none" %}
+                Condition1 = True and <br>
+            {% endif %}
+            SessEntries = 0 and <br>
+            MyTime = True then <br>
+            begin <br>
+            if c crosses over highd1 then sellshort next bar at open; <br>
+            end; <br>
+            if Time = {{ tradeliquid }} then buytocover next bar at open; <br>
+        {% endif %}
+        <br>
+
+        // Exit <br>
+        Setstopcontract; <br>
+        if MyStopLoss > 0 then Setstoploss(MyStopLoss); <br>
+        if MyTakeProfit > 0 then Setprofittarget(MyTakeProfit); <br>
+        <br>
+    {% endif %}
+    <!-------------------------------------- Reversal end ------------------------------------->
+</div>
