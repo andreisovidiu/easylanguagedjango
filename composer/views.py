@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.template.loader import render_to_string
-from . import models
-from . import templates
+from .models import Strategy
 
 # Composer strategy inputs
 @login_required
@@ -32,11 +30,8 @@ def index(request):
                 "takeprofit": takeprofit, 
                 "tradeliquid": tradeliquid
                 })
-        # elif request.POST['button'] == 'Save':
-            # Save inside the model
-            # variable = render_to_string
-
-
+        elif request.POST['button'] == 'Save':
+            pass # Save into model
     else:
         return render(request, "composer/index.html")
 
