@@ -5,7 +5,8 @@ WORKDIR /app
 COPY . /app/                           
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt    
+RUN ./manage.py migrate
 
-CMD gunicorn django_ec2_complete.wsgi:application --bind 0.0.0.0:"${PORT}"
+CMD gunicorn djangoELT.wsgi:application --bind 0.0.0.0:"${PORT}"
 
 EXPOSE ${PORT}    

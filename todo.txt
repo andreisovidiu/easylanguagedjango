@@ -28,6 +28,9 @@ Publish using Docker --> DOING
     2. Create Docker image --> Image does not RUN
     3. Connect to PostgreSQL
 https://www.youtube.com/watch?v=mbUOtILjGgU
+https://www.youtube.com/watch?v=JLdEbb8Hcww
+https://www.youtube.com/watch?v=bTlK4CeicnE WATCHING
+https://stackoverflow.com/questions/66774079/how-to-make-static-files-works-using-django-docker-nginx-and-postgresql-since-it
 
 
 
