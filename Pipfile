@@ -10,6 +10,7 @@ crispy-bootstrap4 = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
 django-ninja = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

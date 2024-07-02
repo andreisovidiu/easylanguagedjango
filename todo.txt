@@ -1,43 +1,22 @@
-Write app models --> DONE
+Create TESTS for current code --> TO DO 
 
-Move model from composer app to students app --> DONE
+https://docs.python.org/3/library/unittest.html
 
-Move html login and register from composer app to students app --> DONE
 
-Add csrf token to the forms --> DONE
+Publish using Docker --> TO DO  
 
-Registration form --> DONE
-https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6&t=777s
-
-Registration form customization --> DONE
-https://stackoverflow.com/questions/5827590/css-styling-in-django-forms
-https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
-
-Login and logout --> DONE (11:46)
-https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
-
-Logout ISSUE -->
-https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26044/6
-
-Logout CSS --> DONE
-
-Add decorator to functions --> DONE
-
-Publish using Docker --> DOING 
-    1. Modify settings.py
-    2. Create Docker image --> Image does not RUN
-    3. Connect to PostgreSQL
 https://www.youtube.com/watch?v=mbUOtILjGgU
 https://www.youtube.com/watch?v=JLdEbb8Hcww
-https://www.youtube.com/watch?v=bTlK4CeicnE WATCHING
-https://stackoverflow.com/questions/66774079/how-to-make-static-files-works-using-django-docker-nginx-and-postgresql-since-it
+https://www.youtube.com/watch?v=mScd-Pc_pX0
+https://www.youtube.com/watch?v=vJAfq6Ku4cI
 
 
 
 #################################################
 
 
-Add API that allows Get method for the saved strategies --> DOING
+Add API that allows Get method for the saved strategies --> TO DO
+
 - Move Jinja/DTL output inside a different HTML file using iframe tags or {%%} DONE
 
 - Add save button in the index.html file and add if condition in views.py with the name of the button respectively DONE
@@ -51,8 +30,7 @@ https://django-ninja.dev/
 
 
 
-
-
+#################################################
 
 
 
