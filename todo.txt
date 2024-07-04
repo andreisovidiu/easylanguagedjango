@@ -17,20 +17,19 @@ https://www.youtube.com/watch?v=vJAfq6Ku4cI
 
 Add API that allows Get method for the saved strategies --> TO DO
 
-- Move Jinja/DTL output inside a different HTML file using iframe tags or {%%} DONE
-
-- Add save button in the index.html file and add if condition in views.py with the name of the button respectively DONE
-
 - Save Jinja output inside the Strategy db model (use render_to_string func) DOING
 https://stackoverflow.com/questions/78525537/saving-html-with-jinja-or-django-template-language-into-the-sqlite-model/78525752#78525752
 
 
-https://www.youtube.com/watch?v=nC2kQylku0w&list=PL-2EBeDYMIbS7bXwkMOS_ajeTdNRnhApX&index=2
-https://django-ninja.dev/
-
-
 
 #################################################
+
+
+DOING
+
+DRF -> https://www.coursera.org/learn/apis/lecture/wKFBS/model-serializers
+
+- Add model and serializers
 
 
 

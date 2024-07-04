@@ -36,13 +36,14 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'students.apps.StudentsConfig',
     'composer.apps.ComposerConfig',
+    'strategiesAPI.apps.StrategiesapiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
