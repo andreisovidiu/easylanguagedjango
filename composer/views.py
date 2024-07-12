@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Strategy
 
 # Composer strategy inputs
 @login_required
@@ -31,9 +30,7 @@ def index(request):
                 "tradeliquid": tradeliquid
                 })
         elif request.POST['button'] == 'Save':
-            strategy = Strategy.create_from_request(request)
-            strategy.save()
-            return redirect('composerindex')
+            pass
     else:
         return render(request, "composer/index.html")
 
